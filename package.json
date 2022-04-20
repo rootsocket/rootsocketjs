@@ -5,7 +5,7 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/imcsorin/rootsocketjs",
+  "repository": "https://github.com/rootsocket/rootsocketjs",
   "license": "MIT",
   "keywords": [],
   "scripts": {
