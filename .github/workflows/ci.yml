@@ -1,0 +1,29 @@
+name: ci
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 10
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10'
+
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install
+        run: yarn install
+
+      - name: Lint
+        run: yarn test:lint && yarn test:prettier
+
+      - name: Test
+        run: yarn test
