@@ -1,7 +1,7 @@
 {
   "name": "rootsocketjs",
-  "version": "0.0.0-development",
-  "description": "RootSocket JavaScript Library - For the browser, React Native or any environment that supports JS",
+  "version": "1.1.0",
+  "description": "RootSocket JavaScript Library - For the browser, React Native or any environment that supports JS WebSockets",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
