@@ -1,5 +1,5 @@
 {
-  "name": "rootsocketjs",
+  "name": "@rootsocket/websocket",
   "version": "1.0.0",
   "description": "RootSocket JavaScript Library - For the browser, React Native or any environment that supports JS WebSockets",
   "main": "build/main/index.js",
