@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Set registry
+        run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
