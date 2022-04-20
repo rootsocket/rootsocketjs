@@ -2,7 +2,8 @@ name: release
 
 on:
   push:
-    branches: [master]
+    tags:
+      - 'v*'
 
 jobs:
   publish:
@@ -15,16 +16,7 @@ jobs:
         with:
           node-version: '16'
 
-      - uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-
-      - name: Install
-        run: yarn install
-
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        run: npm publish
