@@ -7,6 +7,7 @@ import {
   NotAllowedChannelSubscription,
   NotAllowedSend,
   NotConnected,
+  NotSubscribed,
 } from './errors';
 import { decodeConnectionJWT, DecodedConnectionToken } from './jwt';
 import { log } from './logger';
@@ -137,15 +138,14 @@ export class RootSocket {
   onRawOpen: (ev: MessageEvent) => void = null;
 
   constructor({
-    server,
+    server = 'rootsocket.com',
+    debug = false,
+    fetchOptions = {},
+    disableTLS = false,
+    fetcher = fetch,
+    webSocketClass,
     connectionUrl,
     channelUrl,
-    debug,
-    fetchOptions,
-    disableTLS,
-    webSocketClass,
-    /* istanbul ignore next */
-    fetcher = fetch,
   }: RootSocketConstructor) {
     this.debug = debug;
     this.server = server;
@@ -180,24 +180,24 @@ export class RootSocket {
    * ```
    */
   private async retry(
-    retriesLeft = 10,
-    interval = 1000,
-    exponential = false
+    // retriesLeft = 10,
+    // interval = 1000,
+    // exponential = false
   ): Promise<void> {
-    try {
-      if (!this.onReconnect()) {
-        throw new Error('retry');
-      }
+    // try {
+    //   if (!this.onReconnect()) {
+    //     throw new Error('retry');
+    //   }
 
-      await this.connect();
-    } catch (error) {
-      await new Promise((r) => setTimeout(r, interval));
-      this.retry(
-        retriesLeft - 1,
-        exponential ? interval * 2 : interval,
-        exponential
-      );
-    }
+    //   await this.connect();
+    // } catch (error) {
+    //   await new Promise((r) => setTimeout(r, interval));
+    //   this.retry(
+    //     retriesLeft - 1,
+    //     exponential ? interval * 2 : interval,
+    //     exponential
+    //   );
+    // }
   }
 
   /**
@@ -606,6 +606,11 @@ export class RootSocket {
   async send(channel: string, raw: unknown) {
     if (!this.decodedConnectionToken.allowClientSend) {
       this.debug && log(NotAllowedSend.message);
+      return;
+    }
+
+    if (!this.channels[channel]) {
+      this.debug && log(NotSubscribed.message);
       return;
     }
 
