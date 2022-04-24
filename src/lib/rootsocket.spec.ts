@@ -35,11 +35,16 @@ test('send messages', async (t) => {
   const message = 'test';
 
   const rs = getMockedRootSocket({}, (m: string) => {
-    t.is(m.includes(message), true);
+    if (!m.includes('subscription-add')) {
+      t.is(m.includes(message), true);
+    }
   });
 
   await rs.connect();
-  rs.send('a', message);
+  await rs.subscribe('a', () => {
+    /**/
+  });
+  await rs.send('a', message);
 });
 
 test('ping interval', async (t) => {
