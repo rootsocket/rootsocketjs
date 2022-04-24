@@ -179,16 +179,14 @@ export class RootSocket {
    * retry()
    * ```
    */
-  private async retry(
-    // retriesLeft = 10,
-    // interval = 1000,
-    // exponential = false
-  ): Promise<void> {
+  private async retry(): // retriesLeft = 10,
+  // interval = 1000,
+  // exponential = false
+  Promise<void> {
     // try {
     //   if (!this.onReconnect()) {
     //     throw new Error('retry');
     //   }
-
     //   await this.connect();
     // } catch (error) {
     //   await new Promise((r) => setTimeout(r, interval));

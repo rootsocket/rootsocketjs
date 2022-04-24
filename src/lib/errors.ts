@@ -11,4 +11,6 @@ export const ChannelNoHandler = new Error(
   'received message for channel but there are no handlers'
 );
 
-export const NotSubscribed = new Error('connection is not subscribed to that channel')
+export const NotSubscribed = new Error(
+  'connection is not subscribed to that channel'
+);
