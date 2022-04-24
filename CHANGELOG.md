@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.7](https://github.com/rootsocket/rootsocketjs/compare/v1.1.6...v1.1.7) (2022-04-24)
+
+
+### Bug Fixes
+
+* remove retry ([e69b531](https://github.com/rootsocket/rootsocketjs/commit/e69b5315c0eac414edd30fb4400d10732ada6708))
+
 ### [1.1.6](https://github.com/rootsocket/rootsocketjs/compare/v1.1.5...v1.1.6) (2022-04-21)
 
 ### [1.1.5](https://github.com/rootsocket/rootsocketjs/compare/v1.1.4...v1.1.5) (2022-04-21)
