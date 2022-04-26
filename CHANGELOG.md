@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.8](https://github.com/rootsocket/rootsocketjs/compare/v1.1.7...v1.1.8) (2022-04-26)
+
+
+### Bug Fixes
+
+* ci ([48ae0d7](https://github.com/rootsocket/rootsocketjs/commit/48ae0d73403c5962a6a7628571396d40688d71e4))
+* disconnect on bad ping ([1467cab](https://github.com/rootsocket/rootsocketjs/commit/1467cab2da794868a062ff5e90f8b5b00d7758e6))
+
 ### [1.1.7](https://github.com/rootsocket/rootsocketjs/compare/v1.1.6...v1.1.7) (2022-04-24)
 
 
