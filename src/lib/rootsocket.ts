@@ -400,7 +400,7 @@ export class RootSocket {
     this.debug && log('connecting', { data: ev.data });
 
     this.pingIntervalID = setInterval(() => {
-      if (this.isPingPongGood()) {
+      if (!this.isPingPongGood()) {
         // Server didn't respond with a pong for some time, we need to reconnect
         // because something is wrong.
         this.disconnect();
