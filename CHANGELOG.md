@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.10](https://github.com/rootsocket/rootsocketjs/compare/v1.1.9...v1.1.10) (2022-04-27)
+
+
+### Bug Fixes
+
+* update lastPing before starting interval ([5bf7f01](https://github.com/rootsocket/rootsocketjs/commit/5bf7f01c7e661f604f96a11931870978feb2609c))
+
 ### [1.1.9](https://github.com/rootsocket/rootsocketjs/compare/v1.1.8...v1.1.9) (2022-04-26)
 
 ### [1.1.8](https://github.com/rootsocket/rootsocketjs/compare/v1.1.7...v1.1.8) (2022-04-26)
