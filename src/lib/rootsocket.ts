@@ -399,6 +399,7 @@ export class RootSocket {
   onMessageOpen = (ev: MessageEvent) => {
     this.debug && log('connecting', { data: ev.data });
 
+    this.handlePong();
     this.pingIntervalID = setInterval(() => {
       if (!this.isPingPongGood()) {
         // Server didn't respond with a pong for some time, we need to reconnect
