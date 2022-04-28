@@ -39,7 +39,7 @@ interface RootSocketConstructor {
 
 export class RootSocket {
   private webSocketClass = undefined;
-  private pingPongIntervalMs = 1 * 60 * 1000;
+  private pingPongIntervalMs = 45 * 1000;
   private pingPongTimeoutMs = 3 * 60 * 1000;
   private pingIntervalID = undefined;
   private lastPing = undefined;
