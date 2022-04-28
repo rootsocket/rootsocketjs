@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.11](https://github.com/rootsocket/rootsocketjs/compare/v1.1.10...v1.1.11) (2022-04-28)
+
+
+### Bug Fixes
+
+* reduce ping pong interval ([c9d597b](https://github.com/rootsocket/rootsocketjs/commit/c9d597bbfb8dbce80cef4ee67db10fe8b464c939))
+
 ### [1.1.10](https://github.com/rootsocket/rootsocketjs/compare/v1.1.9...v1.1.10) (2022-04-27)
 
 
